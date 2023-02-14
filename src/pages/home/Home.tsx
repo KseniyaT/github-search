@@ -78,7 +78,6 @@ const Home = () => {
     <section className="home">
       <div className="top">
         <div className="container full-height">
-          { error && <div className="row"><div className="col s12"><Error /></div></div> }
           <div className="row full-height">
             <div className="col s12 m6">
               <form>
@@ -107,7 +106,8 @@ const Home = () => {
                   </div>                                  
                 </div>
                 {loading && <Loading />}  
-              </form>             
+              </form>
+              { error && <div className="row"><div className="col s12"><Error /></div></div> }          
             </div>
             <div className="col s6 hide-on-small-only right full-height">
               <img src={earth} alt="" width="490" height="472" className="earth" />

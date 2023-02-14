@@ -11,6 +11,7 @@
     "@types/node": "^16.18.12",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "clean-webpack-plugin": "^4.0.0",
     "dompurify": "^2.4.3",
     "graphql": "^16.6.0",
     "install-peerdeps": "^3.0.3",
@@ -23,8 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "webpack-dev-server --mode=development",
-    "prod": "webpack --mode=production",
+    "dev": "webpack-dev-server --mode=development --config webpack.config.dev.js",
+    "prod": "webpack --mode=production --config webpack.config.prod.js",
     "test": "jest --coverage --env=jsdom",
     "eject": "react-scripts eject"
   },

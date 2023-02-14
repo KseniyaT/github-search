@@ -217,7 +217,12 @@ const Repository = () => {
         							content={
                         // eslint-disable-next-line
         								<div>
-        									<span className={`new badge ${node.state === 'OPEN' ? 'blue' : 'red'}`}>{node.state}</span>
+                          <span
+                            className={`new badge ${node.state === 'OPEN' ? 'blue' : 'red'}`}
+                            data-badge-caption=""
+                          >
+                            {node.state}
+                          </span>
         									<div>{new Intl.DateTimeFormat('en-GB').format(new Date(node.createdAt))}</div>
         									<Link to={node.url} target="_blank" rel="noopener noreferrer">See the sourse</Link>
         								</div>

@@ -40,6 +40,7 @@
     "react/jsx-props-no-spreading": "off",
     "function-paren-newline": "off",
     "no-underscore-dangle": "off",
+    "no-console": 0,
     "max-len": ["error", { "code": 135, "ignoreComments": true, "ignoreUrls": true, "ignoreRegExpLiterals": true }]
   },
   "settings": {
