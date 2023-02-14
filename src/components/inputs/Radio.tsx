@@ -1,5 +1,5 @@
 import React from 'react';
-import './Radio.styles.scss';
+import styles from './Radio.styles.module.scss';
 
 type RadioType = {
 	name: string;
@@ -18,7 +18,7 @@ const Radio = ({ label, name, value, defaultChecked, onChange, ...props }: Radio
   };
 
 	return (
-    <label className="radio-label">
+    <label className={styles.radioLabel}>
       <input
         type="radio" 
         className="with-gap"

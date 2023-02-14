@@ -4,20 +4,20 @@
   font-size: calc(10px + 2vmin);
   color: var(--white-font);
 
-  &_navigation {
+  &Navigation {
     height: auto;
     line-height: normal;
     background-color: transparent;
     box-shadow: none;
   }
 
-  &_link {
+  &Link {
     display: flex;
     align-items: center;
   }
 }
 
-.nav-wrapper {
+.navWrapper {
   display: flex;
   height: 100%;
   align-items: center;

@@ -1,0 +1,50 @@
+.match {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+	height: calc(100vh - 5rem);
+	position: relative;
+	color: var(--white);
+	background-color: var(--blue);
+
+	&Title,
+	&Subtitle {
+		margin: 0;
+	}
+
+	&Subtitle {
+		margin-bottom: 2rem;
+	}
+
+	&Link {
+		display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+	}
+}
+
+.earth {
+	position: absolute;
+  top: -100px;
+  z-index: 2;
+  left: -200px;
+  animation: logo-spin infinite 20s linear;
+}
+
+.spaceman {
+	width: 150px;
+	height: auto;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;   
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

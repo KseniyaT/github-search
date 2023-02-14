@@ -5,6 +5,7 @@ Let's start :smiley:
 1) Create a [github personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 ),
 2) In the root of the repository, add the `.env` file, add the created token to this file with key **GITHUB_ACCESS_TOKEN** (for an example, see the `.env.example` file)
+3) The project was tested on MacOs
 
 ## Usage
 ### Install instruction:

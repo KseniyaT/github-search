@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
-import './Header.styles.scss';
+import styles from './Header.styles.module.scss';
 
 const Header = () => {
   return (
-      <header className="header">
-        <div className="nav-wrapper container">
-          <nav className="header_navigation">
-            <Link className="header_link" to="/">
-              <img src={logo} className="logo" alt="logo" />
+      <header className={styles.header}>
+        <div className={`${styles.navWrapper} container`}>
+          <nav className={styles.headerNavigation}>
+            <Link className={styles.headerLink} to="/">
+              <img src={logo} className={styles.logo} alt="logo" />
               Home
             </Link>
           </nav>        

@@ -1,6 +1,6 @@
 const path = require('path');
- const { merge } = require('webpack-merge');
- const common = require('./webpack.config.common.js');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.config.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const Dotenv = require('dotenv-webpack');
