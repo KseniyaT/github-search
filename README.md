@@ -14,7 +14,7 @@ Let's start :smiley:
   ```sh
   npm install
   ```
-4. Run\
+4. Run
   ```sh
   npm run dev
   ```
@@ -44,8 +44,7 @@ Open [http://localhost:3000](http://localhost:8080) to view it in the browser.
 
 ### `npm run test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test.
 
 ### `npm run prod`
 
