@@ -1,0 +1,25 @@
+.header {
+  background-color: var(--blue);
+  height: 5rem;
+  font-size: calc(10px + 2vmin);
+  color: var(--white-font);
+
+  &_navigation {
+    height: auto;
+    line-height: normal;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.nav-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.logo {
+  height: 5vmin;
+  pointer-events: none;
+  margin-right: 1rem;
+}

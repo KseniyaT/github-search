@@ -1,0 +1,51 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks"
+  ],
+  "ignorePatterns": ["node_modules/*"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb-typescript"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "react/function-component-definition": "off",
+    "arrow-body-style": "off",
+    "react/no-danger": "off",
+    "no-trailing-spaces": "off",
+    "react/jsx-indent": "off",
+    "object-curly-newline": "off",
+    "import/prefer-default-export": "off",
+    "indent": "off",
+    "@typescript-eslint/indent": "off",
+    "no-tabs": 0,
+    "react/require-default-props": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-mixed-spaces-and-tabs": 0,
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "function-paren-newline": "off",
+    "no-underscore-dangle": "off",
+    "max-len": ["error", { "code": 135, "ignoreComments": true, "ignoreUrls": true, "ignoreRegExpLiterals": true }]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}
