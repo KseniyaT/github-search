@@ -10,6 +10,11 @@
     background-color: transparent;
     box-shadow: none;
   }
+
+  &_link {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .nav-wrapper {
@@ -19,7 +24,8 @@
 }
 
 .logo {
-  height: 5vmin;
+  height: calc(10px + 5vmin);;
   pointer-events: none;
   margin-right: 1rem;
 }
+

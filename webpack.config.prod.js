@@ -4,6 +4,7 @@
  const ESLintPlugin = require('eslint-webpack-plugin');
  const HtmlWebpackPlugin = require('html-webpack-plugin');
  const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+ const webpack = require('webpack');
 
  module.exports = merge(common, {
   mode: process.env.NODE_ENV || 'production',
@@ -17,6 +18,10 @@
     new ESLintPlugin({
       extensions: ['js', 'jsx', 'ts', 'tsx'],
     }),
+    new webpack.optimize.UglifyJsPlugin({
+      include: /\.min\.js$/,
+      minimize: true
+    }),    
     new CleanWebpackPlugin(),
   ], 
  });

@@ -100,7 +100,6 @@ const Repository = () => {
 
 	const { data, loading, error } = useQuery(GET_REPOSITORY, {
     variables: { owner, repositoryId },
-    nextFetchPolicy: 'cache-first',
     onCompleted: (res: RepositoryType) => {
 			setTotalCount(res.repository.issues.totalCount);
     },

@@ -22,6 +22,12 @@ const httpLink = createHttpLink({
 const client = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache(),
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'network-only',
+      nextFetchPolicy: 'cache-first',
+    },
+  },
 });
 
 const root = ReactDOM.createRoot(
