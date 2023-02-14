@@ -7,7 +7,7 @@ import Error from '../../components/errors/Error';
 import { RepositoryType, PageInfoType } from '../../types';
 import earth from '../../images/earth.svg';
 import spaceman from '../../images/spaceman.svg';
-import './Home.styles.scss';
+import styles from './Home.styles.module.scss';
 
 export const GET_REPOSITORIES = gql`
   query getRepositories($repositoryKey: String!, $after: String) {
@@ -75,30 +75,30 @@ const Home = () => {
   };
 
   return (
-    <section className="home">
-      <div className="top">
-        <div className="container full-height">
-          <div className="row full-height">
+    <section className={styles.home}>
+      <div className={styles.top}>
+        <div className={`container ${styles.fullHeight}`}>
+          <div className={`row ${styles.fullHeight}`}>
             <div className="col s12 m6">
               <form>
                 <div>
-                  <h1 className="top_title">Github - connecting people</h1>
+                  <h1>Github - connecting people</h1>
                   <p>
                     Searching github repositories has never been so easy - 
                     just enter a keyword in the field and click the Search button
                   </p>
-                  <div className="top_search-group">
-                    <div className="input-container">
+                  <div className={styles.topSearchGroup}>
+                    <div className={styles.inputContainer}>
                       <Input
                         onChange={setRepositoryKey}
                         disabled={loading}
                         placeholder="Key word"
-                        className="input"
+                        className={styles.input}
                       />                      
                     </div>
                     <button
                       type="submit"
-                      className={`waves-effect waves-light btn top_btn ${loading ? 'disabled' : ''}`} 
+                      className={`waves-effect waves-light btn ${styles.topBtn} ${loading ? 'disabled' : ''}`} 
                       onClick={handleSubmit}
                     >
                       Search
@@ -109,20 +109,20 @@ const Home = () => {
               </form>
               { error && <div className="row"><div className="col s12"><Error /></div></div> }          
             </div>
-            <div className="col s6 hide-on-small-only right full-height">
-              <img src={earth} alt="" width="490" height="472" className="earth" />
-              <img src={spaceman} alt="" width="358" height="316" className="spaceman" />
+            <div className={`col s6 hide-on-small-only right ${styles.fullHeight}`}>
+              <img src={earth} alt="" width="490" height="472" className={styles.earth} />
+              <img src={spaceman} alt="" width="358" height="316" className={styles.spaceman} />
             </div>
           </div>
         </div>       
       </div>
-      <div className="bottom">
+      <div className={styles.bottom}>
         <div className="container">
-          {repositoryCount === undefined && <h6 className="bottom_title">The result will be here...</h6>}
+          {repositoryCount === undefined && <h6 className={styles.bottomTitle}>The result will be here...</h6>}
           {(!error && repositoryCount !== undefined) && (
             <div className="row">
               <div className="col s12">
-                <h6 className="bottom_title">Found {repositoryCount} {`repositor${repositoryCount > 1 ? 'ies' : 'y'}`}</h6>
+                <h6 className={styles.bottom_title}>Found {repositoryCount} {`repositor${repositoryCount > 1 ? 'ies' : 'y'}`}</h6>
               </div>
               <div className="col s12">
                 <RepositoriesList data={repositories} />
