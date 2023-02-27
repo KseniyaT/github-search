@@ -150,14 +150,14 @@ describe('Repository', () => {
           repositoryId: 'react'
         }
       },
-      error: new Error("An error occurred")
+      error: new Error('An error occurred')
     };
     render(
       <MockedProvider mocks={[errorMock]} addTypename={false}>
         <Repository />
       </MockedProvider>
     );
-    expect(await screen.findByText('Sorry, something went wrong. We are working to fix the problem.')).toBeInTheDocument();
+    expect(await screen.findByText('An error occurred')).toBeInTheDocument();
   });  
 });
 
